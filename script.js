@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
             discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
         }).then(function () {
             console.log("Google Sheets API betöltve!");
-            loadSheetData(); // Az adatok betöltése az oldal indulásakor
-            setInterval(loadSheetData, 30000); // 30 másodpercenként frissítés
+            loadSheetData();
+            setInterval(loadSheetData, 30000);
         }).catch(function (error) {
             console.error("Hiba az API inicializálásában:", error);
             document.querySelector('.loading').textContent = "❌ API inicializációs hiba!";
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function loadSheetData() {
-        console.log("Adatok frissítése..."); // Debug log, hogy lássuk, hogy fut-e a frissítés
+        console.log("Adatok frissítése...");
 
         gapi.client.sheets.spreadsheets.values.get({
             spreadsheetId: '1f57-NuPxwdwVKAKr7D4-IuIOrxh9l_TBxh6yDu4u3To',
@@ -57,18 +57,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 row.forEach(cell => {
                     const td = document.createElement("td");
-                    td.textContent = cell;
+
+                    // Ellenőrizzük, hogy a cella tartalma URL-e
+                    if (isValidURL(cell)) {
+                        const a = document.createElement("a");
+                        a.href = cell;
+                        a.textContent = cell;
+                        a.target = "_blank"; // Új lapon nyíljon meg
+                        a.rel = "noopener noreferrer"; // Biztonsági okokból
+                        td.appendChild(a);
+                    } else {
+                        td.textContent = cell;
+                    }
+
                     tr.appendChild(td);
                 });
 
                 tableBody.appendChild(tr);
             });
 
-            console.log("Adatok sikeresen frissítve!"); // Debug log
+            console.log("Adatok sikeresen frissítve!");
 
         }).catch(function (error) {
             console.error("Hiba az adatok betöltésekor:", error);
             document.querySelector('.loading').textContent = "❌ Hiba történt!";
         });
+    }
+
+    // Segédfüggvény URL-ek felismerésére
+    function isValidURL(str) {
+        const pattern = /^(https?:\/\/[^\s]+)/;
+        return pattern.test(str);
     }
 });
