@@ -58,6 +58,8 @@ tr:hover {
 }
 .main-category-row {
     background-color: #E63950;  
-    font-weight: bold;
-    border-bottom: 4px solid #000;
+    color: white;              
+    font-weight: bold;         
+    text-transform: uppercase;  
+    border-bottom: 4px solid black; 
 }
