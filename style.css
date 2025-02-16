@@ -60,6 +60,6 @@ tr:hover {
     background-color: #E63950;  
     color: white;              
     font-weight: bold;         
-    text-transform: uppercase;  
+    text-transform: none;  
     border-bottom: 4px solid black; 
 }
