@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
 
                 // "Egyéb Projekt" és "Menü" sorok stílusának beállítása
-                if (row[0] === "Egyéb Projekt" || row[0] === "Menü") {
+                if (row[0]?.trim() === "Egyéb Projekt" || row[0] === "Menü") {
                     tr.classList.add('main-category-row');
                 }
 
