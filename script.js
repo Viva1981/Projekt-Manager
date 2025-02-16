@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (isValidURL(cell)) {
                         const a = document.createElement("a");
                         a.href = cell;
-                        a.textContent = cell;
+                        a.textContent = "🔗 Link megnyitása";
                         a.target = "_blank"; // Új lapon nyíljon meg
                         a.rel = "noopener noreferrer"; // Biztonsági okokból
                         td.appendChild(a);
@@ -86,7 +86,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Segédfüggvény URL-ek felismerésére
     function isValidURL(str) {
-        const pattern = /^(https?:\/\/[^\s]+)/;
-        return pattern.test(str);
+        try {
+            new URL(str);
+            return true;
+        } catch (_) {
+            return false;
+        }
     }
 });
