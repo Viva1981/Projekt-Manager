@@ -36,8 +36,13 @@ document.addEventListener("DOMContentLoaded", function() {
             data.slice(1).forEach((row, index) => {
                 const tr = document.createElement("tr");
 
-                // Első sor, "Egyéb Projekt" és "Menü" sorok stílusának beállítása
-                if (index === 0 || row[0] === "Egyéb Projekt" || row[0] === "Menü") {
+                // Első sor stílusának beállítása
+                if (index === 0) {
+                    tr.classList.add('header-row-1');
+                }
+
+                // "Egyéb Projekt" és "Menü" sorok stílusának beállítása
+                if (row[0] === "Egyéb Projekt" || row[0] === "Menü") {
                     tr.classList.add('main-category-row');
                 }
 
@@ -88,8 +93,13 @@ document.addEventListener("DOMContentLoaded", function() {
             data.slice(1).forEach((row, index) => {
                 const tr = document.createElement("tr");
 
-                // Első sor, "Egyéb Projekt" és "Menü" sorok stílusának beállítása
-                if (index === 0 || row[0] === "Egyéb Projekt" || row[0] === "Menü") {
+                // Első sor stílusának beállítása
+                if (index === 0) {
+                    tr.classList.add('header-row-1');
+                }
+
+                // "Egyéb Projekt" és "Menü" sorok stílusának beállítása
+                if (row[0] === "Egyéb Projekt" || row[0] === "Menü") {
                     tr.classList.add('main-category-row');
                 }
 
