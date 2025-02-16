@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function init() {
         gapi.client.init({
-            apiKey: 'AIzaSyBCqmOG3VAy21KJ0C8UV-Buh3Orc1-igKI',  // Új API kulcs
+            apiKey: 'AIzaSyBCqmOG3VAy21KJ0C8UV-Buh3Orc1-igKI',
             discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
         }).then(function() {
             return gapi.client.sheets.spreadsheets.values.get({
-                spreadsheetId: '1f57-NuPxwdwVKAKr7D4-IuIOrxh9l_TBxh6yDu4u3To',  // Új táblázat azonosító
+                spreadsheetId: '1f57-NuPxwdwVKAKr7D4-IuIOrxh9l_TBxh6yDu4u3To',
                 range: 'A1:Z100'
             });
         }).then(function(response) {
@@ -33,28 +33,34 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             tableBody.innerHTML = "";
-            data.slice(1).forEach(row => {
+            data.slice(1).forEach((row, index) => {
                 const tr = document.createElement("tr");
+
+                // Ellenőrizzük, hogy az A oszlop értéke "Egyéb Projekt" vagy "Menü"
+                if (row[0] === "Egyéb Projekt" || row[0] === "Menü") {
+                    tr.classList.add('main-category-row');
+                }
+
                 row.forEach(cell => {
                     const td = document.createElement("td");
                     td.textContent = cell;
                     tr.appendChild(td);
                 });
+
                 tableBody.appendChild(tr);
             });
         }).catch(function(error) {
-            console.error("Hiba:", error);  // Ellenőrizd a konzolban az esetleges hibákat
+            console.error("Hiba:", error);
             document.querySelector('.loading').textContent = "❌ Hiba történt!";
         });
 
-        // Hívjuk meg a loadSheetData függvényt az init belsejében
         loadSheetData();
         setInterval(loadSheetData, 30000); 
     }
 
     function loadSheetData() {
         gapi.client.sheets.spreadsheets.values.get({
-            spreadsheetId: '1f57-NuPxwdwVKAKr7D4-IuIOrxh9l_TBxh6yDu4u3To',  // Új táblázat azonosító
+            spreadsheetId: '1f57-NuPxwdwVKAKr7D4-IuIOrxh9l_TBxh6yDu4u3To',
             range: 'A1:Z100'
         }).then(function(response) {
             const data = response.result.values;
@@ -79,17 +85,24 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             tableBody.innerHTML = "";
-            data.slice(1).forEach(row => {
+            data.slice(1).forEach((row, index) => {
                 const tr = document.createElement("tr");
+
+                // Ellenőrizzük, hogy az A oszlop értéke "Egyéb Projekt" vagy "Menü"
+                if (row[0] === "Egyéb Projekt" || row[0] === "Menü") {
+                    tr.classList.add('main-category-row');
+                }
+
                 row.forEach(cell => {
                     const td = document.createElement("td");
                     td.textContent = cell;
                     tr.appendChild(td);
                 });
+
                 tableBody.appendChild(tr);
             });
         }).catch(function(error) {
-            console.error("Hiba:", error);  // Ellenőrizd a konzolban az esetleges hibákat
+            console.error("Hiba:", error);
             document.querySelector('.loading').textContent = "❌ Hiba történt!";
         });
     }

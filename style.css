@@ -56,3 +56,7 @@ tr:hover {
     color: #E63950;
     margin-top: 20px;
 }
+.main-category-row {
+    border-bottom: 4px solid #000;  /* Fekete, vastag alsó keret */
+}
+
