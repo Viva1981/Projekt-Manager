@@ -57,12 +57,7 @@ tr:hover {
     margin-top: 20px;
 }
 .main-category-row {
-    background-color: #FFD700;  /* Arany szín */
+    background-color: #E63950;  
     font-weight: bold;
     border-bottom: 4px solid #000;
-}
-.header-row-1 {
-    background-color: #E63950;  /* Piros szín */
-    font-weight: bold;
-    border-bottom: 4px solid #000;  /* Fekete, vastag alsó keret */
 }
