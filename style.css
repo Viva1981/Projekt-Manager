@@ -59,4 +59,10 @@ tr:hover {
 .main-category-row {
     border-bottom: 4px solid #000;  /* Fekete, vastag alsó keret */
 }
+/* Első sor stílusa */
+.header-row-1, .main-category-row {
+    background-color: #E63950;  /* Piros szín */
+    font-weight: bold;
+    border-bottom: 4px solid #000;  /* Fekete, vastag alsó keret */
+}
 
