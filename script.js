@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function init() {
         gapi.client.init({
-            apiKey: 'YOUR_API_KEY',
+            apiKey: 'AIzaSyBCqmOG3VAy21KJ0C8UV-Buh3Orc1-igKI',
             discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
         }).then(function() {
             return gapi.client.sheets.spreadsheets.values.get({
-                spreadsheetId: 'YOUR_SPREADSHEET_ID',
+                spreadsheetId: 'https://docs.google.com/spreadsheets/d/1f57-NuPxwdwVKAKr7D4-IuIOrxh9l_TBxh6yDu4u3To/edit?gid=0#gid=0',
                 range: 'A1:Z100'
             });
         }).then(function(response) {
