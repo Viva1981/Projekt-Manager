@@ -63,3 +63,11 @@ tr:hover {
     text-transform: none;  
     border-bottom: 4px solid black; 
 }
+thead tr {
+    position: sticky;
+    top: 0;
+    background-color: #E63950; /* Fejléc háttérszíne */
+    color: white; /* Fejléc szövegszíne */
+    z-index: 1000; /* Biztosítja, hogy a fejléc a tartalom fölött maradjon */
+}
+
