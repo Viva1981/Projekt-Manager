@@ -22,18 +22,24 @@ body {
 .table-container {
     max-width: 90%;
     margin: auto;
-    overflow-x: auto;
+    overflow-y: auto; /* Görgethetővé teszi a táblázatot függőlegesen */
+    max-height: 500px; /* Adj meg egy maximális magasságot */
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    position: relative;
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #E63950; /* Háttérszín */
+    color: white;
+    z-index: 1000;
 }
 th, td {
     padding: 12px;
@@ -63,11 +69,3 @@ tr:hover {
     text-transform: none;  
     border-bottom: 4px solid black; 
 }
-thead tr {
-    position: sticky;
-    top: 0;
-    background-color: #E63950; /* Fejléc háttérszíne */
-    color: white; /* Fejléc szövegszíne */
-    z-index: 1000; /* Biztosítja, hogy a fejléc a tartalom fölött maradjon */
-}
-
