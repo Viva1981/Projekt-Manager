@@ -33,9 +33,9 @@ html, body {
 
 .content {
     padding: 20px;
-    padding-top: 100px; /* Pont a header alá kerül */
+    padding-top: 80px; 
     box-sizing: border-box;
-    height: calc(100% - 140px); /* A header és az oldalsó margin magasságának levonása */
+    height: calc(100vh - 80px); 
     overflow: auto; /* Görgethető tartalom */
 }
 
@@ -43,7 +43,8 @@ html, body {
     width: 100%;
     max-width: 100%; /* Maximális szélesség 90%-a a kijelzőnek */
     margin: 0 auto; /* Középre igazítás */
-    height: 95%; 
+    height: calc(100% - 40px);
+    max-height: calc(100vh - 120px); 
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
