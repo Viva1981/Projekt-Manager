@@ -31,7 +31,7 @@ html, body {
 
 .content {
     padding: 0; /* Kivesszük a felesleges padding-et */
-    padding-top: 90px; 
+    padding-top: 95px; 
     box-sizing: border-box;
     height: calc(100vh - 80px); /* A fejléc levonásával a maradék hely kitöltése */
     overflow: hidden; /* Nem akarunk extra görgetést */
