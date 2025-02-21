@@ -6,7 +6,7 @@ html, body {
     height: 100%;
     text-align: center;
     box-sizing: border-box;
-    overflow: hidden; /* Csúszka elrejtése */
+    overflow: hidden; /* Csúszka elrejtése a főoldalról */
 }
 
 .header {
@@ -27,15 +27,15 @@ html, body {
 }
 
 .header img {
-    height: 100px;
-    margin-right: 15px;
+    height: 50px;
+    margin-right: 10px;
 }
 
 .content {
     padding: 20px;
     padding-top: 100px; /* Pont a header alá kerül */
     box-sizing: border-box;
-    height: calc(100% - 120px); /* A header és az oldalsó margin magasságának levonása */
+    height: calc(100% - 140px); /* A header és az oldalsó margin magasságának levonása */
     overflow: auto; /* Görgethető tartalom */
 }
 
@@ -44,7 +44,6 @@ html, body {
     max-width: 90%; /* Maximális szélesség 90%-a a kijelzőnek */
     margin: 0 auto; /* Középre igazítás */
     height: calc(100% - 40px); /* Marginok figyelembe vétele */
-    padding: 20px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,8 +51,9 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    overflow: auto; /* Görgethető konténer */
     box-sizing: border-box;
-    overflow: hidden; /* A konténer overflow beállítása */
 }
 
 .special-row {
