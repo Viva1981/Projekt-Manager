@@ -6,6 +6,7 @@ html, body {
     height: 100%;
     text-align: center;
     box-sizing: border-box;
+    overflow: hidden; /* Csúszka elrejtése */
 }
 
 .header {
@@ -26,7 +27,7 @@ html, body {
 }
 
 .header img {
-    height: 100px;
+    height: 60px;
     margin-right: 15px;
 }
 
@@ -40,12 +41,18 @@ html, body {
 
 .table-container {
     width: 100%;
-    max-width: 1200px; /* Maximális szélesség */
+    max-width: 90%; /* Maximális szélesség 90%-a a kijelzőnek */
     margin: 0 auto; /* Középre igazítás */
+    height: calc(100% - 40px); /* Marginok figyelembe vétele */
+    max-height: 100%;
+    padding: 20px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .special-row {
