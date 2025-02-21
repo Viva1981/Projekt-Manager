@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // "Egyéb Projekt" és "Menü" sorok stílusának beállítása
                 if (row[0]?.trim() === "Egyéb Projekt" || row[0]?.trim() === "Menü") {
-                    tr.classList.add('main-category-row');
+                    tr.classList.add('special-row');
                 }
 
                 row.forEach(cell => {
