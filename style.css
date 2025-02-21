@@ -1,11 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
     text-align: center;
 }
-
 .header {
     background-color: #E63950;
     padding: 10px;
@@ -21,7 +20,7 @@ body {
     z-index: 1000;
 }
 .header img {
-    height: 100px;
+    height: 50px;
     margin-right: 15px;
 }
 
