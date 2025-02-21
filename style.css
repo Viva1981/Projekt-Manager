@@ -32,12 +32,12 @@ body {
     position: relative;
 }
 
-/* Sor kiemelés eltávolítása */
-.main-category-row {
-    background-color: transparent !important;  /* Alap háttérszín */
-    color: inherit !important;                /* Alap szövegszín */
-    font-weight: normal !important;
-    border-bottom: none !important;
+/* Egyéb Projekt és Menü sorok kiemelése */
+.special-row {
+    background-color: #E63950 !important;
+    color: white !important;
+    font-weight: bold;
+    border-bottom: 4px solid black !important;
 }
 
 table {
