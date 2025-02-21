@@ -43,7 +43,7 @@ html, body {
     width: 100%;
     max-width: 100%; /* Maximális szélesség 90%-a a kijelzőnek */
     margin: 0 auto; /* Középre igazítás */
-    height: calc(100% - 40px); /* Marginok figyelembe vétele */
+    height: 95%; 
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
