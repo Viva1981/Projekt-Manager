@@ -8,14 +8,14 @@ body {
 
 .header {
     background-color: #E63950;
-    padding: 2px;
+    padding: 5px; /* Csökkentett méret */
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .header img {
-    height: 200px;
+    height: 100px; /* Csökkentett méret */
     margin-right: 15px;
 }
 
@@ -31,6 +31,15 @@ body {
     margin-top: 20px;
     position: relative;
 }
+
+/* Sor kiemelés eltávolítása */
+.main-category-row {
+    background-color: transparent !important;  /* Alap háttérszín */
+    color: inherit !important;                /* Alap szövegszín */
+    font-weight: normal !important;
+    border-bottom: none !important;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -59,11 +68,4 @@ tr:hover {
     font-size: 18px;
     color: #E63950;
     margin-top: 20px;
-}
-.main-category-row {
-    background-color: #E63950;  
-    color: white;              
-    font-weight: bold;         
-    text-transform: none;  
-    border-bottom: 4px solid black; 
 }
