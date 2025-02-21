@@ -2,9 +2,11 @@ body {
     font-family: 'Montserrat', Arial, sans-serif;
     background-color: #f8f9fa;
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Margin hozzáadása a kijelző szélein */
     text-align: center;
+    box-sizing: border-box; /* Padding és border beleértése a teljes méretbe */
 }
+
 .header {
     background-color: #E63950;
     padding: 10px;
@@ -15,22 +17,19 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% - 40px); /* A margin méretének figyelembe vétele */
     height: 80px;
     z-index: 1000;
 }
+
 .header img {
-    height: 50px;
+    height: 100px;
     margin-right: 15px;
 }
 
 .table-container {
-    width: calc(100% - 40px); /* Minimális margin a kijelző szélein */
-    height: calc(100vh - 100px); /* A header magasságát és a marginokat levonjuk */
-    max-width: 100%;
-    max-height: calc(100vh - 100px);
-    margin: 0 auto; /* Középre igazítás */
-    padding: 20px;
+    width: calc(100% - 40px); /* Teljes szélesség a margin figyelembevételével */
+    height: calc(100vh - 120px); /* A header és az oldalsó margin magasságának levonása */
     overflow: auto;
     background: #fff;
     border-radius: 10px;
@@ -39,6 +38,7 @@ body {
     top: 100px; /* Pont a header alá kerül */
     left: 50%;
     transform: translateX(-50%);
+    padding: 20px; /* Margin az oldal alján */
 }
 
 .special-row {
@@ -56,18 +56,22 @@ table {
     top: 0;
     z-index: 1000;
 }
+
 th, td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
+
 th {
     background-color: #E63950;
     color: white;
 }
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
 tr:hover {
     background-color: #ddd;
 }
