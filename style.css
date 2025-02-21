@@ -41,7 +41,7 @@ html, body {
 
 .table-container {
     width: 100%;
-    max-width: 90%; /* Maximális szélesség 90%-a a kijelzőnek */
+    max-width: 100%; /* Maximális szélesség 90%-a a kijelzőnek */
     margin: 0 auto; /* Középre igazítás */
     height: calc(100% - 40px); /* Marginok figyelembe vétele */
     background: #fff;
@@ -51,7 +51,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     overflow: auto; /* Görgethető konténer */
     box-sizing: border-box;
 }
