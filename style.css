@@ -20,21 +20,20 @@ body {
 }
 
 .table-container {
-    width: 100vw; /* Teljes szélesség */
-    height: 100vh; /* Teljes magasság */
-    max-width: 100%; /* Biztosítja, hogy ne legyen kisebb */
-    max-height: 100%; /* Teljes magasság engedélyezése */
-    margin: 0; /* Középre helyezés eltávolítása */
+    width: 98vw; 
+    height: calc(100vh - 110px); 
+    max-width: 98%;
+    max-height: 98%;
+    margin: 2;
     padding: 20px;
-    overflow: auto; /* Görgetés engedélyezése, ha szükséges */
+    overflow: auto; /* Görgethetővé teszi a tartalmat */
     background: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: absolute; /* Teljesen kitölti az ablakot */
-    top: 0;
+    position: absolute;
+    top: 110px; /* A header magasságával azonos érték */
     left: 0;
 }
-
 /* Egyéb Projekt és Menü sorok kiemelése */
 .special-row {
     background-color: #E63950 !important;
